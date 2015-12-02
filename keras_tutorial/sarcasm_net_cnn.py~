@@ -102,14 +102,14 @@ for train_index, test_index in skf:
 
     model = Sequential()
 
-    model.add(Convolution1D(nb_filter=75, filter_length=3, activation='relu', input_dim=1, input_length=max_len))
+    model.add(Convolution1D(nb_filter=50, filter_length=2, activation='relu', input_dim=1, input_length=max_len))
     model.add(Dropout(0.5))
-    model.add(MaxPooling1D(pool_length=8))
+    model.add(MaxPooling1D(pool_length=5))
 
     model.add(Flatten())
-    model.add(Dense(100, activation='relu'))
+    model.add(Dense(80, activation='relu'))
     model.add(Dropout(0.5))
-    model.add(Dense(30, activation='relu'))
+    model.add(Dense(10, activation='relu'))
     model.add(Dropout(0.5)) 
 
     model.add(Dense(1, activation='sigmoid'))
@@ -117,13 +117,9 @@ for train_index, test_index in skf:
     model.compile(loss='binary_crossentropy', optimizer='adam', class_mode="binary")
 
     history = model.fit(X_train, y_train, batch_size=25, nb_epoch=50,
-                        validation_split=0.2)
+                        validation_split=0.2, show_accuracy=True,
+                        callbacks=[earlystopping])
 
-    loss = history.history['loss']
-    plt.plot(loss)
-    plt.show()
-
-    
     score, acc = model.evaluate(X_test, y_test, batch_size=8, show_accuracy=True)
     
     print ('Test score:', score)

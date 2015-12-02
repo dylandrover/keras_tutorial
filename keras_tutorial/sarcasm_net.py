@@ -17,8 +17,8 @@ from keras.models import model_from_json
 from keras.regularizers import l2, activity_l2
 from keras.layers.normalization import BatchNormalization
 
-ironic  = '/home/dylan/Documents/CS886/Project/stanford-corenlp-full-2015-04-20/ironic.txt'
-regular ='/home/dylan/Documents/CS886/Project/stanford-corenlp-full-2015-04-20/regular.txt'
+ironic  = 'ironic.txt'
+regular ='regular.txt'
 
 targets = np.empty([1,])
 full_data = np.empty([1,])
