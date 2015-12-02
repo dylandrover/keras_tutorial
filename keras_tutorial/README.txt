@@ -6,7 +6,7 @@ Keras will need numerous extra libraries to run properly so run this line and ob
 
 ~$ sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git libhdf5-serial-dev python-pip python-matplotlib python-sklearn
 
-Installing Theano and Keras us easiest using the pip package manager. Update it first
+Installing Theano and Keras is easiest using the pip package manager. Update it first
 
 ~$ sudo pip install --upgrade pip
 
