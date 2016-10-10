@@ -4,8 +4,14 @@ import fileinput
 import numpy as np
 import matplotlib.pyplot as plt
 
-pathname1 = '/path_to_sentiment_analysed_files/Ironic/*.txt'
-pathname2 = '/path_to_sentiment_analysed_files/Regular/*.txt'
+# After the Stanford CoreNLP toolkit has analysed the corpus, use this script
+# to codify sentiments as integers [-2,2] for one line in a large text file
+# that can be passed to a learning algorithm.
+
+# Example of output vectors can be seen in ironic.txt and regular.txt
+
+pathname1 = '/path_to_sentiment_analysed_files/Sentiment1/*.txt'
+pathname2 = '/path_to_sentiment_analysed_files/Sentiment2/*.txt'
 
 #Ironic Reviews
 
