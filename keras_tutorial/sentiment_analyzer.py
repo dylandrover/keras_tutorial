@@ -2,6 +2,11 @@ import os
 import fileinput
 import glob
 
+# Requires installation of the Stanford CoreNLP toolkit to work
+# Running this script will insert the sentiment of a sentence below that sentence
+# Further processing (making the sentence sentiments into useable vectors) is done
+# by 'create_vector.py' 
+
 command = 'java -cp "*" -mx5g edu.stanford.nlp.sentiment.SentimentPipeline -file '
 pathname1 = '/point_towards_original_paragraphs/Ironic/*.txt'
 pathname2 = '/point_towards_original_paragraphs/Regular/*.txt'
