@@ -1,6 +1,6 @@
 ## Synopsis 
 
-The purpose of this project was two-fold. One was that it serves as a quick and simple intro to Keras, the second was that it was a proof of concept for the idea that sarcasm or verbal irony (I know there's a subtle difference between the two but let's move on...) can be detected by drastic or frequent changes in the sentiment between sentences within a paragraph. 
+The purpose of this project was two-fold. One was that it serves as a quick and simple intro to Keras, the second was that it was a proof of concept for the idea that sarcasm or verbal irony (I'm aware there's a subtle difference between the two but let's move on...) can be detected by drastic or frequent changes in the sentiment between sentences within a paragraph. 
 
 To test this, a corpus was found with sarcastic and regular reviews from amazon.com. Using the Stanford Sentiment Analysis Recursive Network (part of Stanford's CoreNLP toolkit, see below) each sentence was determined to be Very Negative, Negative, Neutral, Positive or Very Positive. From this, each paragraph's sentences were coded into a vector of numbers with Very Negative as -2, Negative as -1, Neutral as 0, Positive as +1 and Very Positive as +2. The final vector of integers between -2 and +2 would be considered one training example for a Keras neural network to learn from. For more information on Keras, please check out their site (https://keras.io/) or look at a tutorial I did some time ago (https://www.youtube.com/watch?v=Tp3SaRbql4k) 
 
